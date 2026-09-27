@@ -1,0 +1,6 @@
+generated: '2026-09-27'
+method: probed
+generator: harvest-llms.py
+source: https://blog.batchgeo.com/llms.txt
+bytes: 1218
+note: saved verbatim; the provider's own document

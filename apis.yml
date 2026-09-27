@@ -1,23 +1,81 @@
 aid: batchgeo
+
 name: Batchgeo
-description: 'Batchgeo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'BatchGeo is a SaaS platform founded in 2006 that lets users create interactive Google Maps from spreadsheet data. It supports bulk address mapping, custom marker groups, and embedded maps for websites. Over 1.5 million live maps have been generated for users worldwide, serving sectors like real‑estate, sales, and nonprofit. The service offers free and Pro plans, a REST API for automated mapping, and extensive support resources.'
+
 url: https://raw.githubusercontent.com/api-evangelist/batchgeo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Mapping
+- SaaS
+- Data Visualization
+- Real Estate
+- Sales
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/batchgeo-llms.txt
+- type: Hosts
+  url: hosts/batchgeo-hosts.yml
+- type: Vendors
+  url: vendors/batchgeo-vendors.yml
+- type: DomainSecurity
+  url: security/batchgeo-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/batchgeo
+  url: https://batchgeo.com
+- type: Documentation
+  url: https://api.batchgeo.com
+- type: APIReference
+  url: https://api.batchgeo.com
+- type: Pricing
+  url: https://api.batchgeo.com/pricing/
+- type: Blog
+  url: https://blog.batchgeo.com
+- type: Support
+  url: https://support.batchgeo.com/hc/en-us
+- type: SignUp
+  url: https://api.batchgeo.com/signup/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://blog.batchgeo.com/mcp
+    status: 403
+  - url: https://support.batchgeo.com/mcp
+    status: 401
+  - url: https://equityzen.com/company/batchgeo
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
