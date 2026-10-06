@@ -17,7 +17,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-27'
 
-modified: '2026-09-27'
+modified: '2026-10-06'
 
 tags:
 - Mapping
@@ -39,6 +39,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://blog.batchgeo.com/feed/
+  type: BlogRSS
 - type: LLMsTxt
   url: llms/batchgeo-llms.txt
 - type: Hosts
